@@ -1,0 +1,1 @@
+const menuBtn = document.querySelectorAll('.menu__btn')

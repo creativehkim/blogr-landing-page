@@ -47,10 +47,15 @@ h1 {
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 img {
   width: 100%;
+}
+
+li {
+  list-style-type: none;
 }
 
 .outer__wrapper {
@@ -90,26 +95,122 @@ img {
   z-index: -1;
 }
 
+/* navbar */
+
 .navbar {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 30px;
+  font-family: 'ubuntu', sans-serif;
 }
 
-.navbar .logo img {
-  width: 80%;
-  height: 80%;
+.navbar .logo {
+  width: 100px;
+  object-fit: cover;
 }
+
 
 .navbar .hamburger {
+  display: none;
+}
+
+.navbar .hamburger.mobile {
   background-color: transparent;
   padding: 0;
   margin: 0;
 }
 
-.navbar .main__menu {
+.navbar .main__menu.mobile {
   display: none;
 }
+
+/* main menu */
+
+.navbar .main__menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+
+.navbar .main__menu .dropdown {
+  height: 10vh;
+  display: flex;
+  margin-right: auto;
+  margin-left: 20px;
+  align-items: center;
+  position: relative;
+  text-align: left;
+}
+
+.navbar .main__menu .dropdown ul {
+  background-color: var(--clr-neutral-white);
+  color: black;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  position: absolute;
+  width: 150px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .main__menu .dropdown li {
+  font-size: .8rem;
+  margin: 8px auto;
+  cursor: pointer;
+}
+
+.navbar .main__menu .dropdown li:hover {
+  font-weight: 500;
+}
+
+.navbar .main__menu .dropdown button {
+  color: var(--clr-neutral-white);
+  background-color: transparent;
+  margin: 0 1.5rem;
+  opacity: 0.8;
+ font-family: inherit;
+ position: relative;
+
+}
+
+.navbar .main__menu .dropdown button img {
+  position:absolute;
+  width: 10px;
+  top: 4px;
+  right: -18px;
+  transform: rotate(180deg);
+  transition: rotate .3s ease;
+}
+
+.navbar .main__menu .login {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar .main__menu .login button {
+  color: var(--clr-neutral-white);
+  background-color: transparent;
+  opacity: 0.8;
+  font-family: inherit;
+  font-weight: 400;
+  margin-left: 5px;
+  padding: 1em 2em;
+}
+
+.navbar .main__menu .dropdown button:hover {
+  opacity: 1;
+  font-weight: 500;
+}
+
+.navbar .main__menu .login button:hover {
+  background-color: var(--clr-primary-red-200);
+  border-radius: 50px;
+  opacity: 1;
+}
+
+/* Header text */
 
 .main__text {
   margin: 7rem 1rem 0;
